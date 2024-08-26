@@ -1,3 +1,10 @@
-*Books Store
+# Book Store
 
-**Live site url_: https://66080e2e9a3fbba3921d4bf7--rococo-snickerdoodle-207b63.netlify.app/
+## Live site URL: 
+
+## Feature
+* Add books to read page
+* Add books to wish list page
+* See the books reat in chart
+* See details of books
+* Simple design of card to easily fing bast books
