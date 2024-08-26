@@ -44,29 +44,27 @@ export const saveBooks = (book) => {
       icon: "warning",
       title: "Book is alrady exist",
     });
+
     return;
   }
 
   else{
-    Swal.fire({
-      title: "Are you sure?",
-      text: "You want to add this book to read",
-      icon: "question",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "YES, of course"
-    }).then((result) => {
-      if (result.isConfirmed) {
-        books.push(book);
-        localStorage.setItem("books", JSON.stringify(books));
-
-        Swal.fire({
-          title: "success",
-          text: "Your book is added to read",
-          icon: "success"
-        });
-      }
+    books.push(book);
+    localStorage.setItem("books", JSON.stringify(books));
+    const Toast = Swal.mixin({
+      toast: true,
+      position: "top-end",
+      showConfirmButton: false,
+      timer: 2000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.onmouseenter = Swal.stopTimer;
+        toast.onmouseleave = Swal.resumeTimer;
+      },
+    });
+    Toast.fire({
+      icon: "success",
+      title: "Book is added to read list",
     });
   }
 };
@@ -95,25 +93,22 @@ export const saveWishBooks = (book) => {
   }
 
   else{
-    Swal.fire({
-      title: "Are you sure?",
-      text: "You want to add this book to read",
-      icon: "question",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "YES, of course"
-    }).then((result) => {
-      if (result.isConfirmed) {
-        wishBooks.push(book);
-        localStorage.setItem("wishBooks", JSON.stringify(wishBooks));
-
-        Swal.fire({
-          title: "success",
-          text: "Your book is added to wish list",
-          icon: "success"
-        });
-      }
+    wishBooks.push(book);
+    localStorage.setItem("wishBooks", JSON.stringify(wishBooks));
+    const Toast = Swal.mixin({
+      toast: true,
+      position: "top-end",
+      showConfirmButton: false,
+      timer: 2000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.onmouseenter = Swal.stopTimer;
+        toast.onmouseleave = Swal.resumeTimer;
+      },
+    });
+    Toast.fire({
+      icon: "success",
+      title: "Book is added to wish list",
     });
   }
 };

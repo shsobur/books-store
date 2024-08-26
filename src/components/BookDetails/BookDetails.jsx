@@ -1,6 +1,7 @@
 import "../BookDetails/BookDetails.css";
 import { useLoaderData, useParams } from "react-router-dom";
-import { saveBooks, saveWishBooks } from "../uilitis/Index";
+import { getBooks, saveBooks, saveWishBooks,  } from "../uilitis/Index";
+import Swal from "sweetalert2";
 
 
 const BookDetails = () => {
@@ -16,7 +17,15 @@ const BookDetails = () => {
   }
 
   const handleWishBooks = (wishBooks) => {
-    saveWishBooks(wishBooks)
+    const readBooks = getBooks()
+    const isReadBookExist = readBooks.some(book => book.id === wishBooks.id)
+
+    if(isReadBookExist) {
+      Swal.fire("You have alrady read this book");
+      return;
+    }
+
+    saveWishBooks(wishBooks);
   }
 
   return (
