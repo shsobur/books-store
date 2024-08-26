@@ -1,0 +1,69 @@
+.main_baner_container {
+  height: calc(100vh - 68px);
+  width: 100%;
+  padding: 10px 80px;
+}
+
+.main_inner_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 16px;
+  padding-left: 60px;
+  background-color: #f3f3f3;
+}
+
+.left_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 50%;
+}
+
+.baner_contain h1 {
+  font-size: 4.4rem;
+  font-weight: 700;
+  line-height: 90px;
+  margin-bottom: 40px;
+}
+
+.right_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 50%;
+}
+
+.baner_image {
+  height: 90%;
+  width: 100%;
+}
+
+.baner_image img {
+  width: 100%;
+  height: 100%;
+}
+
+.main_books_container {
+  padding: 40px 60px;
+}
+
+.books_title h2 {
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.main_books_inner_container {
+  height: 100%;
+  width: 100%;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}

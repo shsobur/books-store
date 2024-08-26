@@ -1,0 +1,38 @@
+#main_details_container {
+  width: 100%;
+  padding: 40px 80px;
+}
+
+#left_side {
+  width: 40%;
+  border-radius: 16px;
+  background-color: rgb(245, 245, 245);
+}
+
+#left_side img {
+  height: 100%;
+  width: 100%;
+}
+
+#right_side {
+  height: auto;
+  width: 60%;
+  padding: 0 0 0 40px;
+}
+
+.Books_details_table table {
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 10px;
+}
+td {
+  padding-right: 100px;
+  color: #424242;
+  text-align: start;
+}
+th {
+  text-align: start;
+}
