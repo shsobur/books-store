@@ -1,0 +1,51 @@
+.main_list_container {
+  height: auto;
+  width: 100%;
+  padding: 20px 80px;
+}
+
+.main_inner_list_container {
+  height: 100%;
+  width: 100%;
+}
+
+.list_title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  padding: 10px 0;
+  text-align: center;
+  border-radius: 8px;
+  background-color: #f3f3f3;
+  margin-bottom: 50px;
+}
+
+.book_list_container {
+  height: auto;
+  width: 100%;
+}
+
+.book_card_comtainer {
+  height: auto;
+  width: 100%;
+  padding: 20px 5px;
+}
+
+.main_sort_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main_sort_container select {
+  outline: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 10px 50px;
+  background-color: #21b30a;
+}
+
+.main_sort_container option {
+  background-color: #ffffff;
+  border: 2px solid black;
+}
