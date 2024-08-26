@@ -1,7 +1,6 @@
 import Swal from "sweetalert2";
 
 // Read Books__
-
 export const getBooks = () => {
   let books = [];
   const storedBooks = localStorage.getItem("books");
@@ -13,7 +12,6 @@ export const getBooks = () => {
 };
 
 // Wish List Book__
-
 export const getWidhBooks = () => {
   let wishBook = [];
   const storedWishBooks = localStorage.getItem("wishBooks")
@@ -25,7 +23,6 @@ export const getWidhBooks = () => {
 }
 
 // Add to read list__
-
 export const saveBooks = (book) => {
   let books = getBooks();
   const isReadBookExist = books.find((b) => b.id === book.id);
@@ -72,7 +69,6 @@ export const saveBooks = (book) => {
 };
 
 // Add to wish list__
-
 export const saveWishBooks = (book) => {
   let wishBooks = getWidhBooks();
   const isWishBookExist = wishBooks.find((b) => b.id === book.id);
