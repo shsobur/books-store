@@ -7,4 +7,15 @@
 .main_nav_bar_outer_container {
   max-width: 1920px;
   min-width: 640px;
+  margin: auto;
+}
+
+.main_bar_chart_outer_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1920px;
+  min-width: 640px;
+  margin: auto;
+  padding: 20px;
 }

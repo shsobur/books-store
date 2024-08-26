@@ -1,5 +1,4 @@
 import { CiLocationOn } from "react-icons/ci";
-import "../WishListBooksCard/WishListBooksCard.css";
 import { IoPeopleOutline } from "react-icons/io5";
 import { FaRegFile } from "react-icons/fa";
 import { Link } from "react-router-dom";
