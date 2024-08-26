@@ -1,6 +1,6 @@
-import { useLoaderData, useParams } from "react-router-dom";
 import "../BookDetails/BookDetails.css";
-import { saveReadBooks } from "../uilitis/Index";
+import { useLoaderData, useParams } from "react-router-dom";
+import { saveBooks, saveWishBooks } from "../uilitis/Index";
 
 
 const BookDetails = () => {
@@ -11,9 +11,12 @@ const BookDetails = () => {
 
   console.log(book);
 
-  const handleReadBooks = (books) => {
-    console.log(books)
-    saveReadBooks(books);
+  const handleReadBooks = (readBooks) => {
+    saveBooks(readBooks);
+  }
+
+  const handleWishBooks = (wishBooks) => {
+    saveWishBooks(wishBooks)
   }
 
   return (
@@ -77,7 +80,7 @@ const BookDetails = () => {
           </>
           <div className="card-actions gap-8 justify-start mt-4">
             <button onClick={() => handleReadBooks(book)} className="btn btn-outline">Read</button>
-            <button className="btn btn-info bg-[#59c6d2]  text-white font-bold">
+            <button onClick={() => handleWishBooks(book)} className="btn btn-info bg-[#59c6d2]  text-white font-bold">
               Wishlist
             </button>
           </div>
