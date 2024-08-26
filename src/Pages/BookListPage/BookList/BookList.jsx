@@ -9,9 +9,22 @@ const BookList = () => {
     <div>
       <div className="main_list_container">
         <div className="main_inner_list_container">
+
           <div className="list_title">
             <h2>Books</h2>
           </div>
+
+          <div className="main_sort_container">
+            <select>
+              <option disabled selected>
+                Sort by
+              </option>
+              <option>Rating</option>
+              <option>Number of pages</option>
+              <option>Publish year</option>
+            </select>
+          </div>
+
           <div className="book_list_container">
             <div className="flex items-center -mx-4 overflow-x-auto overflow-y-hidden flex-nowrap dark:bg-gray-100 dark:text-gray-800 pb-5 pl-5">
               <Link
