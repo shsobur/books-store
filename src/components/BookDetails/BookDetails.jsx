@@ -1,5 +1,7 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import "../BookDetails/BookDetails.css";
+import { saveReadBooks } from "../uilitis/Index";
+
 
 const BookDetails = () => {
   const books = useLoaderData();
@@ -9,15 +11,20 @@ const BookDetails = () => {
 
   console.log(book);
 
+  const handleReadBooks = (books) => {
+    console.log(books)
+    saveReadBooks(books);
+  }
+
   return (
     <>
       <div
         id="main_details_container"
         className="card lg:card-side bg-base-100"
       >
-        <figure id="left_side">
+        <div id="left_side">
           <img src={book.image} alt="Album" className="rounded-xl" />
-        </figure>
+        </div>
         <div id="right_side" className="card-body">
           <h2 className="card-title text-4xl font-bold">{book.bookName}</h2>
           <div>
@@ -69,7 +76,7 @@ const BookDetails = () => {
             </tbody>
           </>
           <div className="card-actions gap-8 justify-start mt-4">
-            <button className="btn btn-outline">Read</button>
+            <button onClick={() => handleReadBooks(book)} className="btn btn-outline">Read</button>
             <button className="btn btn-info bg-[#59c6d2]  text-white font-bold">
               Wishlist
             </button>
