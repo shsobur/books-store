@@ -1,6 +1,6 @@
 # Book Store
 
-## Live site URL: 
+## Live site URL: https://66cc9e1c979bd7246659f8c1--velvety-lamington-6cff13.netlify.app/
 
 ## Feature
 * Add books to read page
